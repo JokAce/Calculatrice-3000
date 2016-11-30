@@ -1,0 +1,108 @@
+package calc;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args){
+		
+		double a;							// ETAPE 1 / crée les variables
+		double b;
+		char reponse = ' '; 
+		char recommencer = ' ';
+		Scanner sc = new Scanner(System.in);
+
+		
+	
+		do {		// Etape 2 / BOucle qui execute le programme
+		System.out.println("---------------------------------");
+		System.out.println("BIENVENUE SUR CALCULATRICE 3000 !"); // Etape 3 / Msg de présentation 
+
+		System.out.println("QUEL CALCUL VOULEZ VOUS EFFECTUER ?");
+		System.out.println("1 - addition");
+		System.out.println("2 - soustraction");			// Choix de calcul
+		System.out.println("3 - multiplication");
+		System.out.println("4 - division");
+		System.out.println("5 - l'aire d'un triangle");
+		System.out.println("6 - l'aire d'un rectangle");
+		System.out.println("---------------------------------");
+		reponse = sc.next().charAt(0);
+			
+		
+			
+
+		
+		if (reponse == '1') {
+		System.out.println("QUEL ADDITION VOULEZ VOUS EFFECTUER ?");			// Etape 4 : Condition ( calcul )
+		
+		a = sc.nextDouble();
+		
+		
+		System.out.println("+");
+		b = sc.nextDouble();
+		double c = a + b;
+		System.out.println(a+" + "+b+ " = "+c);
+		
+		}else if(reponse == '2') {
+			System.out.println("QUEL SOUSTRACTION VOULEZ VOUS EFFECTUER ?");
+			a = sc.nextDouble();
+			System.out.println("-");
+			b = sc.nextDouble();
+			double c = a - b;
+			System.out.println(a+" - "+b+ " = "+c);
+			
+		}else if(reponse == '3') {
+			System.out.println("QUEL MULTIPLICATION VOULEZ VOUS EFFECTUER ?");
+			a = sc.nextDouble();
+			System.out.println("*");
+			b = sc.nextDouble();
+			double c = a * b;
+			System.out.println(a+" * "+b+ " = "+c);
+			
+		}else if(reponse == '4') {
+			System.out.println("QUEL DIVISION VOULEZ VOUS EFFECTUER ?");
+			a = sc.nextDouble();
+			System.out.println("/");
+			b = sc.nextDouble();
+			double c = a / b;
+			System.out.println(a+" / "+b+ " = "+c);
+			
+		}else if(reponse == '5') {
+			System.out.println("QUEL EST LA HAUTEUR EN CM  ?");
+			a = sc.nextDouble();
+			System.out.println("QUEL EST LA BASE EN CM  ?");
+			b = sc.nextDouble();
+			double aire = a * b / 2;
+			System.out.println("L'aire du triangle est " +aire+ " cm²");
+			
+		}else if(reponse == '6') {
+			System.out.println("QUEL EST LA LONGUEUR EN CM  ?");
+			a = sc.nextDouble();
+			System.out.println("QUEL EST LA LARGUEUR EN CM  ?");
+			b = sc.nextDouble();
+			double aire = a * b;
+			System.out.println("L'aire du rectangle est " +aire+ " cm²");
+			
+		}else{
+			System.out.println("CE TYPE DE CALCUL N'EXISTE PAS OU N'EST PAS DISPONIBLE"); // En cas d'erreur
+			System.out.println("---------------------------------");
+		}
+
+	      do{       
+	          System.out.println("Voulez vous recommencer ?(O/N)");
+	          recommencer = sc.next().charAt(0);				// Etape 5 / Msg recommencer + boucle si erreur
+	         
+	        }while(recommencer != 'O' && recommencer != 'N');
+	       
+	      }while(recommencer == 'O');
+	       
+	    System.out.println("Au revoir !"); // Etape 6 / Msg au revoir
+	      
+	    
+	    
+			
+	}}
+		
+
+
+
+
